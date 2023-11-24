@@ -99,7 +99,7 @@ function App() {
   }
 
   function onEnterPress(e){
-    if(e.keyCode == 13 && e.shiftKey == false) {
+    if(e.keyCode === 13 && e.shiftKey === false) {
       handlesubmitbtnclicked()
     }
   }
@@ -162,6 +162,9 @@ function App() {
         <a href={link_dict[selected_model]} class = 'hyperlink' target = '_blank'>
           {selected_model!==4?`♠♣모델${selected_model} 해보러 가기♣♠`:''}
         </a>
+        <p class = 'red'>
+          ***특정 의도로 프롬프팅하여 데이터 제공자가 불쾌함을 느낄 만한 대화를 생성하거나 이를 공유하지 말아주세요***
+        </p>
         {selected_model === 4 ?
         <ul>
         {generatechat()}
